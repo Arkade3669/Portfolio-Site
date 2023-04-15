@@ -11,19 +11,42 @@
 <body>
     <h1>oh no ye to portfolio hogaya help i am being held hostage by aayush garg</h1>
     <img src="fwoggies.png" alt="intrusive bisexual thoughts">
-    <h1>Contact Me</h1>
-    <form id="contact-form" method="post" action="">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required>
-      <br>
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
-      <br>
-      <label for="message">Message</label>
-      <textarea id="message" name="message" required></textarea>
-      <br>
-      <button type="submit" id="submit-btn">Send</button>
+    
     </form>
     <p id="form-status"></p>
+    <h1>Get in Touch!</h1>
+    <form id="contact-form" method="post" action="">
+      <label for="your-name">What's your funny name?</label>
+      <input type="text" id="your-name" name="your-name" required placeholder="e.g. Sir Chirps-a-lot, Lady Sparklebottom, Captain Wiggles">
+      <br>
+      <label for="email">Email (we won't sell it to Nigerian princes)</label>
+      <input type="email" id="email" name="email" required placeholder="e.g. iamaunicorn@flyingrainbow.com">
+      <br>
+      <label for="message">What's your funny message?</label>
+      <textarea id="message" name="message" required placeholder="e.g. I just found a map to Candy Mountain! Want to come?"></textarea>
+      <br>
+      <button type="submit" id="submit-btn">Send Message</button>
+    </form>
+    <p id="form-status"></p>
+
+    <script>
+      const fs = require('fs');
+      const path = require('path');
+      const formDataDir = path.join(__dirname, 'formData');
+      if (!fs.existsSync(formDataDir)) {
+        fs.mkdirSync(formDataDir);
+      }
+      
+      const form = document.getElementById('contact-form');
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+        const formObj = Object.fromEntries(formData.entries());
+        const fileName = `${formObj['your-name']}_${Date.now()}.json`;
+        const filePath = path.join(formDataDir, fileName);
+        fs.writeFileSync(filePath, JSON.stringify(formObj, null, 2));
+        document.getElementById('form-status').textContent = "Thank you for contacting us! We'll get back to you as soon as we can.";
+        form.reset();
+      });
 </body>
 </html>
