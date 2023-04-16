@@ -54,8 +54,8 @@
     <h1>Hi, I'm Pulkit Bansal</h1>
     <p class="lead">I'm a high school student with a passion for web development. I love to create 
         responsive and user-friendly websites and web applications.</p>
-</div>
-<div class="container">
+ </div>
+ <div class="container">
   <div class="row">
     <div class="col-md-4">
       <img src="fwoggies.png" class="rounded-circle img-fluid" alt="Fwoggies">
@@ -70,7 +70,34 @@
          In faucibus justo vel sapien consectetur eleifend.</p>
     </div>
   </div>
+ </div>
+  <!-- Contact Form -->
+<div class="container my-5">
+  <h2 class="text-center mb-5">Get in Touch</h2>
+  <form action="/submit" method="post">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+    </div>
+    <div class="form-group">
+      <label for="message">Message:</label>
+      <textarea class="form-control" id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Send</button>
+  </form>
 </div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-3">
+  <div class="container">
+    <p class="mb-0">Designed by a mad scientist</p>
+    <p class="mb-0">Built with <a href="https://expressjs.com/" class="text-white">Express.js</a></p>
+  </div>
+</footer>
 
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
