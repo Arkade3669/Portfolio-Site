@@ -7,3 +7,5 @@ uh site for my stuff i guess
  - 1.2 , it is 12 in the morning
  > added contact form and kinda destroyed the HTML, will fix later
  >help the Nodejs is broken i want to die
+
+ - 1.3 redid the entire site, missing all JS and stuff, looks decent

@@ -1,57 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <script src="sheesh.js"></script>
-  <title>Document</title>
-</head>
-
-<body>
-  <h1>oh no ye to portfolio hogaya help i am being held hostage by aayush garg</h1>
-  <img src="fwoggies.png" alt="intrusive bisexual thoughts">
-
-  </form>
-  <p id="form-status"></p>
-  <h1>Get in Touch!</h1>
-  <form id="contact-form" method="post" action="">
-    <label for="your-name">What's your funny name?</label>
-    <input type="text" id="your-name" name="your-name" required
-      placeholder="e.g. Sir Chirps-a-lot, Lady Sparklebottom, Captain Wiggles">
-    <br>
-    <label for="email">Email (we won't sell it to Nigerian princes)</label>
-    <input type="email" id="email" name="email" required placeholder="e.g. iamaunicorn@flyingrainbow.com">
-    <br>
-    <label for="message">What's your funny message?</label>
-    <textarea id="message" name="message" required
-      placeholder="e.g. I just found a map to Candy Mountain! Want to come?"></textarea>
-    <br>
-    <button type="submit" id="submit-btn">Send Message</button>
-  </form>
-  <p id="form-status"></p>
-
-  <script>
-    const fs = require('fs');
-    const path = require('path');
-    const formDataDir = path.join(__dirname, 'formData');
-    if (!fs.existsSync(formDataDir)) {
-      fs.mkdirSync(formDataDir);
+  <title>Pulkit Bansal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #232323;
+      color: #ffffff;
     }
+    .navbar {
+      background-color: #333333;
+    }
+    .navbar-brand {
+      color: #ffffff;
+    }
+    .jumbotron {
+      background-color: #111111;
+    }
+  </style>
+</head>
+<body class="container-fluid">
 
-    const form = document.getElementById('contact-form');
-    form.addEventListener('submit', function (event) {
-      event.preventDefault();
-      const formData = new FormData(event.target);
-      const formObj = Object.fromEntries(formData.entries());
-      const fileName = `${formObj['your-name']}_${Date.now()}.json`;
-      const filePath = path.join(formDataDir, fileName);
-      fs.writeFileSync(filePath, JSON.stringify(formObj, null, 2));
-      document.getElementById('form-status').textContent = "Thank you for contacting us! We'll get back to you as soon as we can.";
-      form.reset();
-    });
-    </script>
- </body>
-</html >
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">Pulkit Bansal</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="jumbotron text-center">
+    <h1>Hi, I'm Pulkit Bansal</h1>
+    <p class="lead">I'm a high school student with a passion for web development. I love to create 
+        responsive and user-friendly websites and web applications.</p>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <img src="fwoggies.png" class="rounded-circle img-fluid" alt="Fwoggies">
+    </div>
+    <div class="col-md-8">
+      <h2>About Me</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel elit eget elit tincidunt eleifend 
+         non non urna. Proin faucibus posuere justo, vel commodo enim bibendum eget. Curabitur euismod, sapien 
+         nec viverra lobortis, est elit venenatis mauris, sed consectetur lectus ante vel ipsum. Nullam sit 
+         amet mi eu nunc suscipit tincidunt nec in quam. Fusce iaculis lacinia aliquet. Duis volutpat blandit 
+         tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; 
+         In faucibus justo vel sapien consectetur eleifend.</p>
+    </div>
+  </div>
+</div>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
+          integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+          crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+         
