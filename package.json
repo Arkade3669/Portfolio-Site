@@ -4,9 +4,10 @@
   "description": "uh site for my stuff i guess\r >portfolio site for project for induction in this school club \r >may expand later\r  - v 1.1 at 15/4/23 looks like this\r [image](https://user-images.githubusercontent.com/112306670/232240963-babbbc03-1fa6-4ae8-a784-aaf2f8416ac2.png)\r  - 1.2 , it is 12 in the morning\r  > added contact form and kinda destroyed the HTML, will fix later\r  >help the Nodejs is broken i want to die",
   "main": "sheesh.js",
   "scripts": {
+    "start": "nodemon sheesh.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "pulkit??",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.3.5",

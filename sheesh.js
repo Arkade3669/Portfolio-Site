@@ -2,12 +2,13 @@
 //OH NEVERMIND
 // Require necessary modules
 const express = require('express');
+const port = 5000
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 
 // Create an instance of the express application
 const app = express();
-
+app.listen(port, () => console.log('listening on port ${port}'))
 // Set up body-parser middleware to parse form data
 app.use(bodyParser.urlencoded({ extended: false }));
 
