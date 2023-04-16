@@ -1,1 +1,22 @@
 body {background-color: blueviolet;}
+.container {
+    margin-top: 50px;
+  }
+  
+  .col-md-4 {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .col-md-8 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .rounded-circle {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
+  
