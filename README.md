@@ -10,3 +10,5 @@ uh site for my stuff i guess
 
  - 1.3 redid the entire site, missing all JS and stuff, looks decent
  ![image](https://user-images.githubusercontent.com/112306670/232323470-abb324a3-6209-440d-999c-938a16c2a552.png)
+ - 1.4 added some stuff![image](https://user-images.githubusercontent.com/112306670/232748052-46019092-cc0c-4423-9538-6c459036e5b5.png)
+
